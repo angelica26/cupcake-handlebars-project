@@ -3,12 +3,15 @@ var router = express.Router();
 var cupcake = require("../models/cupcake.js");
 
 router.get("/", function(req, res) {
-  cupcake.all(function(data) {
+  cupcake.selectAll(function(data) {
     var hbsObject = {
-      cupcake
-    }
-  })
-})
+      cupcakes: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+  });
+});
+
 
 
 module.exports = router;

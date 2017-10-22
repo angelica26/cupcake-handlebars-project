@@ -1,0 +1,31 @@
+h1, h2 {
+	font-family: "Helvetica", sans-serif;
+	text-align: center;
+}
+
+h1 {
+	color: #8d00ad;
+}
+
+img {
+	position: relative;
+	left: 43%
+}
+
+button {
+	background-color: #fff787;
+	border: 3px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	left: 46%
+}
+
+textarea {
+	border: 3px solid black;
+	position: relative;
+	left: 41%
+}
