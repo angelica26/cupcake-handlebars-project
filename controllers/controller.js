@@ -12,6 +12,22 @@ router.get("/", function(req, res) {
   });
 });
 
+router.post("/addCupcake", function(req, res) {
+	//url: /addCupcake/vanilla
+	//req.params = { flavor: vanilla}
 
+  cupcake.insertOne(req.body.cupcakeInput, function(data) {
+    console.log(data);
+    res.redirect("/");
+  });
+});
+
+router.post("/updateCupcake", function(req, res) {
+console.log("Made it here!")
+  cupcake.updateEaten(req.body, function(data) {
+    console.log(data);
+    res.json("/");
+  });
+});
 
 module.exports = router;

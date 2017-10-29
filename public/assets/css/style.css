@@ -12,7 +12,7 @@ img {
 	left: 43%
 }
 
-button {
+#add-cupcake {
 	background-color: #fff787;
 	border: 3px solid black;
 	border-radius: 3px;
@@ -28,4 +28,23 @@ textarea {
 	border: 3px solid black;
 	position: relative;
 	left: 41%
+}
+
+li {
+	margin: 5px;
+
+}
+
+button {
+	margin: 5px;
+}
+
+.lefty {
+	position: relative;
+	left: 5%;
+}
+
+.righty {
+	position: relative;
+	left: 70%;
 }

@@ -6,15 +6,20 @@ var cupcake = {
 			cb(res);
 		});
 	},
-// Not sure how to add input from user as the value...
-	insertOne: function(cols, vals, cb) {
-		orm.insertOne("cupcakes", "cupcake_name", " ", function(res) {
-			cb(res);
-		});
+
+	insertOne: function(name, cb) {
+		orm.insertOne("cupcakes", ["cupcake_name", "eaten"], [name, false], cb);	
 	},
 // Pretty confused on this one
 	updateOne: function(cols, vals, cb) {
-		orm.updateOne("cupcakes", "cupcake_name", " ", function(res) {
+		orm.updateOne("cupcakes", "eaten", " ", function(res) {
+			cb(res);
+		});
+	},
+
+	updateEaten: function(obj, cb) {
+		console.log(obj)
+		orm.update("cupcakes", {eaten: obj.eaten}, "id = " + obj.id, function(res) {
 			cb(res);
 		});
 	}

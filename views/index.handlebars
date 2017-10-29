@@ -1,12 +1,31 @@
 <div id="new-cupcake">
-  <li>{{cupcakes}}</li>
+	<ul>
+	{{#each cupcakes}}
+  		<li>
+  			{{cupcake_name}}
+  			{{!-- Changing what the button says based on whether or not it's eaten --}}
+  			<button data-id={{id}} data-eaten={{eaten}} id="eat-button">
+  				{{#if eaten}}
+  					All gone!
+  				{{/if}}
+
+  				{{#unless eaten}}
+  					Eat me!
+  				{{/unless}}
+  			</button> 
+
+  		</li>
+	{{/each}}
+	</ul>
 </div>
 
 
 
 <h1>Cupcake Chomper!</h1>
 <img src="assets/images/cupcake.jpeg" width="205" height="250">
+<form action="/addCupcake" method="post">
 <h2>Let's eat some cupcakes...</h2>
-<textarea id="cupcake-input" rows="3" cols="40"></textarea>
+<textarea id="cupcake-input" rows="3" cols="40" name="cupcakeInput"></textarea>
 <br>
-<button id="add-cupcake" type="button">Add a Cupcake!</button
+<button id="add-cupcake" type="submit">Add a Cupcake!</button>
+</form>
