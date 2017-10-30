@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var cupcake = require("../models/cupcake.js");
 
+
 router.get("/", function(req, res) {
   cupcake.selectAll(function(data) {
     var hbsObject = {
@@ -13,11 +14,9 @@ router.get("/", function(req, res) {
 });
 
 router.post("/addCupcake", function(req, res) {
-	//url: /addCupcake/vanilla
-	//req.params = { flavor: vanilla}
-
   cupcake.insertOne(req.body.cupcakeInput, function(data) {
     console.log(data);
+    console.log("made it to add cc");
     res.redirect("/");
   });
 });

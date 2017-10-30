@@ -12,7 +12,7 @@ img {
 	left: 43%
 }
 
-#add-cupcake {
+#addCupcake {
 	background-color: #fff787;
 	border: 3px solid black;
 	border-radius: 3px;
@@ -39,12 +39,12 @@ button {
 	margin: 5px;
 }
 
-.lefty {
+.uneaten {
 	position: relative;
 	left: 5%;
 }
 
-.righty {
+.eaten {
 	position: relative;
 	left: 70%;
 }

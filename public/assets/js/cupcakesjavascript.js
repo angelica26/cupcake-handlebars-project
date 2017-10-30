@@ -3,7 +3,7 @@
 // Tried changing position of items based on if they were eaten or not by
 // adding/removing the class attribute for the list item. Did not work.
 
- 	// var isEaten = $("button").attr("data-eaten");
+ 	// var isEaten = $("eatButton").attr("data-eaten");
  	// if (isEaten == 0) {
  	// 		$("li").addClass(".lefty")
  	// 	}
@@ -13,8 +13,10 @@
  	// 	}
 
 // changing cupcake's eaten status on click of button 
- 	$("button").click(function(){
+ 	$(".eat").click(function(){
+ 		console.log("Eat btn clicked");
  		event.preventDefault();
+
  		var id = $(this).attr("data-id");
  		var eaten = $(this).attr("data-eaten");
  		console.log(id);
@@ -38,12 +40,13 @@
 			}
 		}).then(function(res){
 			window.location.href = res;
-		})
- 	})
+		});
+ 	});
+
 // Tried changing the positioning of cupcakes on click based on eaten status.
 // Also did not work.
  
- 	// $("#eat-button").click(function(){
+ 	// $("#eatButton").click(function(){
  	// 	event.preventDefault();
  	// 	var eaten = $(this).attr("data-eaten")
  		
